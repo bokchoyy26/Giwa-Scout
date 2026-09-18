@@ -1,0 +1,15 @@
+[Unit]
+Description=GIWA Launch Watch
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/giwa-scout
+ExecStart=/root/giwa-scout/venv/bin/python giwa_launchwatch.py
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

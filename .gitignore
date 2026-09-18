@@ -1,0 +1,13 @@
+# Secrets — never commit
+config.env
+
+# Local data
+*.db
+*.db.bak
+*.json
+!package.json
+
+# Python
+venv/
+__pycache__/
+*.pyc
